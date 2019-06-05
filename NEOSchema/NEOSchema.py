@@ -2,25 +2,37 @@ from datetime import datetime
 import math
 
 def jS_ts_splitter(ts):
+
     '''
-    The Natural Emergent Ordering Schema: NEOS is spacetime.
+    IN: ts: int representing milliseconds since January 1, 1970 local time
+                quite possibly generated from javaScript
+    
+    OUT: return: Python datetime object with millisecond resolution
+                 using microsecond inputs to datetime constructor
+    
+    The Natural, Emergent, Ordering Schema: NEOS is spacetime.
+
+    In case we want a data type that can handle high-frequency, 
+    temporal (and geoSpatial processing) at the microsecond scale
     
     A brute force converter of a local-time javaScript Date
-    WEAKNESS: Doesn't take advantage of any known date 
+    
+    WEAKNESSES: Doesn't take advantage of any known date 
     stastical ranges or hard limits (limits known with 
     almost certainty)
     
     For processing many dates, not using this knowledge could
-    add up? However, if ts were completely random with
-    max entropy then this algorithm would not be *so* bad in
-    general spirit.
+    add up. 
+    However, if ts were completely random with max entropy then 
+    this basic algorithm would not be *so* bad in general spirit.
     
-    At any rate, it is a great way to explore the nuances of
-    time and complexity and it is linked to the optimal 
-    digital processing of EM radiation, my favorite.
+    At any rate, it is a neat way to explore the nuances of
+    time and complexity.
     '''
-    #magic data is January 1, 1970
-    total_micro_sec = ts*(10**3)
+
+    
+    #total_micro_sec = ts*(10**3)
+    
     final_count_down = ts*(10**3)
     
     #step 1: count the ms in years, oh how the time passes...
