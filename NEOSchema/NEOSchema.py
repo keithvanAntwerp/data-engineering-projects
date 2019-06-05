@@ -1,33 +1,28 @@
 from datetime import datetime
 import math
 
-def jS_ts_splitter(ts):
+def jS_ts_splitter(ts: int):
 
-    '''
-    IN: ts: int representing milliseconds since January 1, 1970 local time
-                quite possibly generated from javaScript
-    
-    OUT: return: Python datetime object with millisecond resolution
-                 using microsecond inputs to datetime constructor
-    
-    The Natural, Emergent, Ordering Schema: NEOS is spacetime.
+    '''Return a python datetime object with the millisecond resolution of
+    an input int representing the number of milliseconds since
+    Midnight, January 1, 1970 local time.
 
-    In case we want a data type that can handle high-frequency, 
-    temporal (and geoSpatial processing) at the microsecond scale
+    This python datetime objects maximum sample frequency is 
+    1 million Hz, or 1 megahurtz.
+   
+    This is an inefficient brute force converter of 
+    a local-time javaScript Date in int form with the
+    intention of learning and applying algorithms.
     
-    A brute force converter of a local-time javaScript Date
+    WEAKNESSES: Doesn't take advantage of any known time 
+    stastics or hard limits (limits known with 
+    almost certainty) e.g. knowing the year and pruning.
     
-    WEAKNESSES: Doesn't take advantage of any known date 
-    stastical ranges or hard limits (limits known with 
-    almost certainty)
-    
-    For processing many dates, not using this knowledge could
-    add up. 
-    However, if ts were completely random with max entropy then 
-    this basic algorithm would not be *so* bad in general spirit.
-    
-    At any rate, it is a neat way to explore the nuances of
-    time and complexity.
+    If the time-samples were completely random (max entropy) then 
+    this basic algorithm would not be *so* bad in spirit. 
+
+    At any rate, it is a neat and informative way to explore the nuances of
+    time and algorithmic complexity.
     '''
 
     
