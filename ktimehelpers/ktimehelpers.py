@@ -1,19 +1,22 @@
 from datetime import datetime
 
-def jS_ts_splitter(ts: int):
+def posix_ms_int_pydatetime(ts: int):
 
     '''Return a python datetime object with the millisecond resolution of
     an input int representing the number of milliseconds since
     January 1, 1970 UTC.
 
-    Matches datatime.fromtimestamp(ints/1000)
+    Matches output from datatime.fromtimestamp(ts/1000)
 
     1 microsecond is associated with maximum sample frequency of
     1 million Hz, or 1 megaHz.
    
     This is an inefficient brute force converter of 
-    a local-time javaScript Date in int form with the
-    intention of learning and applying algorithms.
+    a ("POSIX time/UNIX") or ("Epoch time") or ("Unix time") 
+     
+    The main purpose of this function is education: 
+    Basic learning and application of a simple algorithmic
+    approach to a common problem in big data.
     
     WEAKNESSES: Doesn't take advantage of any known time 
     stastics or hard limits (limits known with 
@@ -26,9 +29,10 @@ def jS_ts_splitter(ts: int):
     time and algorithmic complexity.
     '''
     #total_micro_sec = ts*(10**3)
+    #us: microsecond
     
     #correct for January 1, 1970 UTC time
-    us_corr = 8*60*60*1000000
+    us_corr = 8*60*60*1000000 #8 hours ahead of local
     
     final_count_down = ts*(10**3)
     if (final_count_down - us_corr) > 0:
@@ -52,7 +56,6 @@ def jS_ts_splitter(ts: int):
         
         year +=1
     
-    #the number of years in yearss1970loops
     fyears = int(year)
     
     #step 2a: count the months
@@ -89,7 +92,7 @@ def jS_ts_splitter(ts: int):
     fmins = int(final_count_down//us_in_minute)
     final_count_down -= fmins*us_in_minute
     
-    #step 5: seconds
+    #step 5: count the seconds
     us_in_secs = us_in_minute/60
     fsecs = int(final_count_down//us_in_secs)
     final_count_down -= fsecs*us_in_secs
@@ -100,6 +103,7 @@ def jS_ts_splitter(ts: int):
     final_count_down -= fus*us_in_secs
     
     #toggle printing by uncommenting line below for now
+    
     #print((type(fyears), type(fmonth), type(fdays), type(fhour), type(fmins), type(fsecs), type(fus)),
           #(fyears, fmonth, fdays, fhour, fmins, fsecs, fus))
     
