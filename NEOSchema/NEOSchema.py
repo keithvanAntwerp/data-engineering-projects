@@ -8,7 +8,7 @@ def jS_ts_splitter(ts: int):
 
     Matches datatime.fromtimestamp(ints/1000)
 
-    This python datetime objects maximum sample frequency is 
+    1 microsecond is associated with maximum sample frequency of
     1 million Hz, or 1 megaHz.
    
     This is an inefficient brute force converter of 
