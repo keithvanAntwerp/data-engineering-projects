@@ -6,7 +6,7 @@
 
 ![schema][schema]
 
-[schema]: https://github.com/keithvanantwerp/data-engineering-projects/sparkify1.png "Logo Title Text 2"
+[schema]: https://github.com/keithvanAntwerp/data-engineering-projects/blob/master/sparkify1.png "a schema"
 
 
 ETL JSON to PostgreSQL
