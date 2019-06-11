@@ -2,7 +2,11 @@ import psycopg2
 from sql_queries import create_table_queries, drop_table_queries
 
 def create_database():
-    # connect to default database
+    '''Return a PostgreSQL connection and cursor to a newly created 
+    relational database. Remember to manage open connections, cursors and
+    databases carefully. 
+    '''
+    # connect to default database hosted locally
     conn = psycopg2.connect(
         "host=127.0.0.1 dbname=studentdb user=keithvanantwerp")
     conn.set_session(autocommit=True)
@@ -25,6 +29,8 @@ def create_database():
 
 
 def drop_tables(cur, conn):
+    '''
+    '''
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
