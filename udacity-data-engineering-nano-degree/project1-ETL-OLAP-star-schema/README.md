@@ -1,13 +1,16 @@
 # project1-etl-olap-star-schema
 
 A music streaming company Sparkify has deployed a music streaming app.
-The Sparkify analytics team wants a **PostgreSQL**
-database and ETL pipeline with a schema and flow optimized for song play analysis.
+The analytics team wanted a **PostgreSQL**
+OLAP database schema and ETL pipeline optimized for song play analysis.
 
-1. **Extract** data from 2 collections of *JSON* files (almost).
+This is essentially a mini data mart that links data from referenced in this paper: [The Million Song Data Set](http://www.ee.columbia.edu/~dpwe/pubs/McFeeBEL12-MSDC.pdf) to the simulated log files.
+## Summary of Extract, Transform, Load: ETL flow
+
+1. **Extract** data from 2 collections of *JSON* files. 
 Local directory structure and paths are provided.
 
-2. **Transform** data into a star schema optimized for songplay analysis
+2. **Transform** data into form according to a OLAP star schema optimized for songplay analysis.
 
 3. **Load** in to customized _PostgreSQL Version ?_ database.
 
