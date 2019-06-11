@@ -1,9 +1,8 @@
-# Sparkify Project 1 Overview
+# project1-etl-olap-star-schema
 
-Sparkify has deployed a music streaming app.
+A music streaming company Sparkify has deployed a music streaming app.
 The Sparkify analytics team wants a **PostgreSQL**
-database and ETL pipeline with a schema and flow  
-optimized for song play analysis.
+database and ETL pipeline with a schema and flow optimized for song play analysis.
 
 1. **Extract** data from 2 collections of *JSON* files (almost).
 Local directory structure and paths are provided.
@@ -13,46 +12,6 @@ Local directory structure and paths are provided.
 3. **Load** in to customized _PostgreSQL Version ?_ database.
 
 ## Specified Project Constraints and Schema
-
-### songplays fact table: song play event data
-
-* start time of event
-* user id
-* user level
-* song id
-* artist id
-* session id
-* user location
-* user agent
-
-### artists table
-
-* artist_id from the _Million Song Dataset_
-* artist geospatial origin information requested (where the artist is from)
-  * latitude, longitude, location
-
-### songs table
-
-* song_id from the _Million Song Dataset_
-* title
-* artist_id from the _Million Song Dataset_
-* year
-* duration
-
-### users table
-
-* user id
-* first name
-* last name
-* gender
-* level
-
-### time table
-
-* timestamps are given in the JSON log data
-
-
-* start time, hour, day, week, month, year, weekday
 
 ## Data Type Considerations
 
@@ -80,36 +39,6 @@ Local directory structure and paths are provided.
 * reliability
 * adaptability
 
-### 1. Create the PostgreSQL database
-
-### 2. ETL (Extract, Transform, Load) pipeline
-
-Transfer data from a directory of JSON files into Postgres database using Python 3
-
-#### Extracting
-
-> Bring forth from storage into working memory
-
-#### Transforming
-
-#### Loading
-
-- transfers data from files in two local directors into these tables in Postgres using Python and SQL
-
-### 3. Test
-
-by running queries provided by Sparkify analytics team to compare to expected results
-
-### COPY
-
-- Alternative is to convert the JSON to CSV files that can be used in the PostgreSQL `COPY table_name...`
-
-```
-COPY table_name [ (column [, ...] ) ]
-    FROM {'filename' |  STDIN}
-    [ [ WITH ] ( option [, ...] ) ]
-```
-
 ### Example Queries
 
 some text
@@ -119,22 +48,6 @@ some text
 JavaScript Date objects are represented by the number of milliseconds since midnight
 January 1, 1970. When the Date object is instantiated, the timestamp is in local device time.
 
-
-
 ```javascript
 var now = new Date()
 ```
-
-
-```python
-import datetime from datetime
-
-
-
-
-```
-
-class datetime.datetime
-A combination of a date and a time. Attributes: year, month, day, hour, minute, second, microsecond, and tzinfo.
-
-What are some good options for a dashboard?

@@ -16,7 +16,7 @@ def get_json_files(dirpath):
    
     '''
     all_files = []
-    for root, dirs, files in os.walk(dirpath):
+    for root, _, files in os.walk(dirpath):
         files = glob.glob(os.path.join(root,'*.json'))
         for f in files :
             all_files.append(os.path.abspath(f))
@@ -142,8 +142,8 @@ def main():
     cur = conn.cursor()
     print("f0")
 
-    process_data(cur, conn, filepath='data/song_data', func=process_song_file)
-    process_data(cur, conn, filepath='data/log_data', func=process_log_file)
+    process_data(cur, conn, filepath='exampe-data/song_data', func=process_song_file)
+    process_data(cur, conn, filepath='example-data/log_data', func=process_log_file)
 
     conn.close()
 
