@@ -13,6 +13,8 @@ Local directory structure and paths are provided.
 
 ## Specified Project Constraints and Schema
 
+![data mart schema](https://github.com/keithvanAntwerp/data-engineering-projects/blob/master/sparkify1.png)
+
 ## Data Type Considerations
 
 * explicit type validations
