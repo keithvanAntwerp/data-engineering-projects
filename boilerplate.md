@@ -1,3 +1,25 @@
+## Keith W. Van Antwerp
+
+I was trained under 2 seperate grants from the National Science Foundation (NSF).
+
+1. NSF GRFP: Sensorimotor integration in Neuromuscular-Biomechanical (NeuroMechanical)
+> Insight into Neural Sensorimotor Integration using State Estimation and Muscle Synergies
+
+_--Official Grant Title_
+
+2. NSF IGERT: Hybrid Neural Microsystems: Integrating Neural Tissue and Engineered Systems
+
+> The [Hybrid Neural Microsystems] program is focused on the creation of a training
+> environment that combines cellular and systems neuroscience with microelectronics
+> computing technology and microelectromechanical systems (MEMS)
+
+_--NSF IGERT Training Grant for "Hybrid Neural Microsystems (HNM)"_
+
+SOURCE: [www.NSF.gov IGERT HNM](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0333411)
+
+The hybridzation of neural systems and synthetic micro-systems
+
+
 ## (sensori-neuro-actuator)-(mechano-enviro) systems (SNA-ME)
 
 SNA forms a sensorimotor loop
