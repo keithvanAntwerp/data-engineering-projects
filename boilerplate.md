@@ -11,7 +11,12 @@ class SNA_loop():
     def __init__(self, tau):
         self.tau_description = '''a single number quantifying loop time
                                   for a point in loop it is the time-delay
-                                  IMPORTANT: carefully consider reference before defining time-delay'''
+                                  IMPORTANT: carefully consider reference before defining time-delay
+                                  
+                                  Loops are directed as DAGS, Where nodes are at
+                                  Steady State with stochastic functionality
+                                  
+                                  '''
         
 
 
@@ -30,7 +35,7 @@ From Delp to Susskind:
 
 modular SNA nodes have time-index flux through defined **2D boundary**
 
-### sensori-
+### sensori:
 
 listens for informative inputs encoded in a finite alphabet
 
@@ -46,13 +51,13 @@ contained by a **spatiotemporal boundary B**
 **inputs and outputs (I/O)**: discrete signal time-indexed threads
 fluxing through **B**
 
-graph edge: relation type: connection, communication between modules:
+graph edge: relation type: {connection, communication} (between modules)
 
-### actuative-
+### actuator:
 
 To actuate is to influence, to change the physical state of. 
 
-communication is transmitter-actuation on a receiver
+communication is a transmitter-actuation on a receiver
 
 hybridizing computational and actuative systems is what robotics is all about.
 
