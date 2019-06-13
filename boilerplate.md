@@ -1,11 +1,56 @@
-## Keith W. Van Antwerp
+## NMS
 
-I was trained under 2 seperate grants from the National Science Foundation (NSF).
+The primary function of the nervous system is the
+coordination of muscle tissue based on the real-time processing of sensory data
+to achieve a range of "goals" from homeostatic regulation to predicting
+the trajectory of material bodies.
 
-1. NSF GRFP: Sensorimotor integration in Neuromuscular-Biomechanical (NeuroMechanical)
-> Insight into Neural Sensorimotor Integration using State Estimation and Muscle Synergies
++ Nervous System: sensorimotor-multitask integrator
 
-_--Official Grant Title_
++ Musculo
+
++ Skeletal
+
+It seems like science likes to pin down a rule that is essentially a function
+that maps a system state to a future system state.
+This requires an 
+
+1. **observables** that allows estimation of that state (location in state space).
+
+In biomedicine these observables are **IMAGES** and **tissue-system-O-GRAMS** (e.g.
+electrocardiogram, electromyogram, electroencephalogram)
+
+
+2. 
+
+## Neural Sensorimotor Integration (NSI) Decoder
+
+NSI decoder is artifical intelligence that estimates
+the internal network structure of biological-like neuromechanical networks
+based on motion capture and electromyographic (EMG) data.
+
+The Central Nervous System (CNS) is viewed as a multi-task-driven, 
+real-time sensory processor that must execute motor (output) sequences
+to achieve multiple goals.
+
+Sometimes a CNS is tasked with finding any solution
+i.e. exploring the solution space.
+
+Other times a CNS is tasked with choosing one of many apparently equivalent solutions.
+
+Exploring and exploiting solutions sums up very well the task of the CNS.
+
+The Internal Structure of the Network
+
+Sensory Modes Map to Motor Modes in a Steady-State Closed-Loop Station-Keeping Task
+
+## Keith Van Antwerp
+
+I was trained under 2 seperate fellowships from the National Science Foundation (NSF).
+
+1. NSF GRFP: Insight into Neural Sensorimotor Integration using State Estimation and Muscle Synergies
+
+_--NSF Grant ID_
 
 2. NSF IGERT: Hybrid Neural Microsystems: Integrating Neural Tissue and Engineered Systems
 
