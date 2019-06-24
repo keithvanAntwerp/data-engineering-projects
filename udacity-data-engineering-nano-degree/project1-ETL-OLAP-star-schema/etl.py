@@ -86,7 +86,7 @@ def process_log_file(cur, filepath):
 
     # insert songplay records
 
-    # a song version can be approximately well-identified
+    # a song version can be well-identified
     # by the artist who performed it. But artists play/record
     # same songs often as different versions
     # e.g. "LIVE" versions where you can hear all the fans cheering and you think
@@ -142,7 +142,7 @@ def main():
     cur = conn.cursor()
     print("f0")
 
-    process_data(cur, conn, filepath='exampe-data/song_data', func=process_song_file)
+    process_data(cur, conn, filepath='example-data/song_data', func=process_song_file)
     process_data(cur, conn, filepath='example-data/log_data', func=process_log_file)
 
     conn.close()

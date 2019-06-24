@@ -1,11 +1,15 @@
-# project1-etl-olap-star-schema
+# ETL to PostgreSQL Star Schema
 
-A music streaming company Sparkify has deployed a music streaming app.
-The analytics team wanted a **PostgreSQL**
-OLAP database schema and ETL pipeline optimized for song play analysis.
+The purpose of this project is to extract data from 2 sources: 
 
-This is essentially a mini data mart that links artist and song data from
-[The Million Song Data Set] (http://millionsongdataset.com/) to
+1. **application log files** from a music streaming application
+2. **Million Song Dataset** subset representing a rich **"big data"** set
+
+to transform it into a star schema optimized for online analytics processing (**OLAP**)
+and loaded into a single instance of **PostgreSQL** server
+
+This is essentially a mini data mart that stitches rich artist and song data from
+[The Million Song Data Set](http://millionsongdataset.com/) to
 simulated application event logs.
 
 ## Summary of Extract, Transform, Load: ETL flow
@@ -18,45 +22,15 @@ simulated application event logs.
 
 ## Specified Project Constraints and Schema
 
+NOTE: The relations shown in the **entity relationship diagram (ERD)** are conveying the central table foreign key to primary key and is a schematic constraint specified in the project.
+
 ![data mart schema](https://github.com/keithvanAntwerp/data-engineering-projects/blob/master/sparkify1.png)
 
-## Data Type Considerations
-
-* explicit type validations
-  * input source file format and encoding: `JSON`
-    * _Python 3_ `str()`
-    * _PostgreSQL_ `varchar`
-  * number type considerations
-    * integer
-    * floating-point
-    * precise numeric
-  * datatime type considerations
-    * 
-  * other data type considerations
-*minimize resource cost: `min{[time, FLOPS, ]}`
-
-## Efficiency and Complexity 
-
-* time
-* computing
-* process operations
-* memory considerations
-* other goals:
-* security
-* reliability
-* adaptability
 
 ### Example Queries
-
-some text
-
-### Dates
-
-JavaScript Date objects are represented by the number of milliseconds since midnight
-January 1, 1970. When the Date object is instantiated, the timestamp is in local device time.
-
-```javascript
-var now = new Date()
 ```
+>>> python create_tables.py
+>>> python etl.py
 
-(http://www.ee.columbia.edu/~dpwe/pubs/McFeeBEL12-MSDC.pdf) to the simulated log files.
+>>> example queries
+```
