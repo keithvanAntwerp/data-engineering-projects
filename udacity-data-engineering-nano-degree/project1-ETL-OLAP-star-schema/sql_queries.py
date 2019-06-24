@@ -1,12 +1,11 @@
 # DROP TABLES
-songplay_table_drop = "drop table if exists songplays"
-user_table_drop = "drop table if exists users"
-song_table_drop = "drop table if exists songs"
-artist_table_drop = "drop table if exists artists"
-time_table_drop = "drop table if exists time"
+#songplay_table_drop = "drop table if exists songplays"
+#user_table_drop = "drop table if exists users"
+#song_table_drop = "drop table if exists songs"
+#artist_table_drop = "drop table if exists artists"
+#time_table_drop = "drop table if exists time"
 
 # CREATE TABLES
-# floats contain NaN, Infinity -Infinity
 
 songplay_table_create = ("""CREATE TABLE songplays (
 songplay_id serial primary key,
@@ -108,5 +107,5 @@ AND (abs(songs.duration - %s) < 5);
 
 create_table_queries = [songplay_table_create, user_table_create,
                         song_table_create, artist_table_create, time_table_create]
-drop_table_queries = [songplay_table_drop, user_table_drop,
-                      song_table_drop, artist_table_drop, time_table_drop]
+#drop_table_queries = [songplay_table_drop, user_table_drop,
+#                     song_table_drop, artist_table_drop, time_table_drop]
