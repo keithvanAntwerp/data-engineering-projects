@@ -1,32 +1,36 @@
-## NMS
+## NMSCE: Neuro, Musculo, Skeleto-Connectio, Enviro 
 
-The primary function of the nervous system is the
-coordination of muscle tissue based on the real-time processing of sensory data
-to achieve a range of "goals" from homeostatic regulation to predicting
-the trajectory of material bodies.
+The primary function of the nervous system is to move the body by
+coordinating the activation of muscle tissue based on the 
+real-time processing of sensory data
+to achieve "goals" ranging from homeostatic regulation to predicting
+the trajectory of material systems or economic markets.
 
-+ Nervous System: sensorimotor-multitask integrator
-
-+ Musculo
-
-+ Skeletal
-
-It seems like science likes to pin down a rule that is essentially a function
+## Science and Machine Learning
+One might say that science likes to pin down a rule that is essentially a function
 that maps a system state to a future system state.
-This requires an 
 
-1. **observables** that allows estimation of that state (location in state space).
+This process requires: 
 
-In biomedicine these observables are **IMAGES** and **tissue-system-O-GRAMS** (e.g.
-electrocardiogram, electromyogram, electroencephalogram)
+1. defining the state
 
+2. establishing **observables** that allow estimation of that state
 
-2. 
+3. building a model
 
-## Neural Sensorimotor Integration (NSI) Decoder
+4. making a testable prediction with that model
 
-NSI decoder is artifical intelligence that estimates
-the internal network structure of biological-like neuromechanical networks
+5. testing the prediction through experiment
+
+6. considering the complexity of the model (Occam's Razor)
+
+In biomedicine these observables are **imaging**, **scans** and **tissue-system-O-GRAMS** like ECG, EMG and EEG along with the 
+machine that goes `print("PING!")`
+
+## Neural Sensorimotor Integration (NSI) Decoding
+
+NSI decodings are algorithms that estimate
+the internal network structure of biological NMSC
 based on motion capture and electromyographic (EMG) data.
 
 The Central Nervous System (CNS) is viewed as a multi-task-driven, 
@@ -65,15 +69,13 @@ SOURCE: [www.NSF.gov IGERT HNM](https://www.nsf.gov/awardsearch/showAward?AWD_ID
 The hybridzation of neural systems and synthetic micro-systems
 
 
-## (sensori-neuro-actuator)-(mechano-enviro) systems (SNA-ME)
-
-SNA forms a sensorimotor loop
+## The SensoriMotor Loop
 
 ```python
 
-class SNA_loop():
+class SensoriMotor_loop():
     '''Construct a sensorimotor loop
-    Abstract Nodal Network Loop Object 
+     
     '''
     def __init__(self, tau):
         self.tau_description = '''a single number quantifying loop time
@@ -85,9 +87,6 @@ class SNA_loop():
                                   
                                   '''
         
-
-
-
 ```
 
 I am interested in **sensori-neuro-actuator** (SNA) systems that include:

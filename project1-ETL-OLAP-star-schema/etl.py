@@ -91,7 +91,7 @@ def process_log_file(cur, filepath):
         
         # insert songplay records
         if results: #if not None
-            print(results, type(results))
+            #print(results)
             song_play_data = [jf['ts'], results[0][0], results[0][1], 
                               jf['userId'], jf['level'], jf['sessionId'],
                               jf['location'], jf['userAgent']]
@@ -114,15 +114,21 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
-    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb")
+    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb password = student")
     cur = conn.cursor()
-    print("f0")
 
     process_data(cur, conn, filepath='example-data/song_data', func=process_song_file)
     process_data(cur, conn, filepath='example-data/log_data', func=process_log_file)
-
+    
+    test_query = "SELECT * FROM songplays LIMIT 5;"
+    cur.execute(test_query)
+    results = cur.fetchall()
+    print("TEST QUERY: " + test_query + '\n' + str(results))
+    
     conn.close()
 
 
 if __name__ == "__main__":
     main()
+    
+
