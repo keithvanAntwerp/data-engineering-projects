@@ -52,7 +52,7 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
-    '''Process a plaintext log file consisting of lines of JSON
+    '''Process log file consisting of lines of JSON
     common
     '''
     # open log file
