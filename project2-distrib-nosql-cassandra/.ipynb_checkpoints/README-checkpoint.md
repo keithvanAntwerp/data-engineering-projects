@@ -114,4 +114,3 @@ Apache Cassandra optimized for fast writes.
 Usually, denormalized tables are slow for writes. OLTP are typically relational and 3NF.
 
 https://docs.datastax.com/en/dse/6.7/cql/cql/ddl/dataModelingApproach.html
-

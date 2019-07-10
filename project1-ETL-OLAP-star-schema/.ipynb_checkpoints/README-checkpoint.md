@@ -43,19 +43,4 @@ NOTE: The relations shown in the **entity relationship diagram (ERD)** are conve
 
 ![data mart schema](https://github.com/keithvanAntwerp/data-engineering-projects/blob/master/sparkify1.png)
 
-## Encodings
-
-`bad_encoding = "R\u00c3\u0083\u00c2\u00b6yksopp"`
-
-## Questions
-
-**JSON**: Javascript Object Notation
-
-+ When a file has the extension *.json, what assumptions are safe to make? 
-  + UTF-8 encoded
-  + Are "stacks" of JSON in line with RFC, ECMA?
-
-+ Main disadvantage of not using Pandas?
-  + Pandas is optimized?
-  + RAM constraints?
 
