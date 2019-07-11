@@ -16,9 +16,12 @@ This is essentially a mini data mart that stitches rich artist and song data fro
 [The Million Song Data Set](http://millionsongdataset.com/) to
 simulated application event logs.
 
-## Examples
+## Example
 ```
 >>> python create_tables.py
+create_tables.py:33: UserWarning: About to attempt to drop to reset database sparkifydb
+  warnings.warn(("About to attempt to drop to reset database sparkifydb"))
+If you would like to proceed type YES: YES
 >>> python etl.py
 80 files found in example-data/song_data
 1/80 files processed.
@@ -43,19 +46,27 @@ NOTE: The relations shown in the **entity relationship diagram (ERD)** are conve
 
 ![data mart schema](https://github.com/keithvanAntwerp/data-engineering-projects/blob/master/sparkify1.png)
 
-## Encodings
+
+## TODO and Questions
+
+### Encodings
+
+This project provides the opportunity to deal with encoding challenges.
 
 `bad_encoding = "R\u00c3\u0083\u00c2\u00b6yksopp"`
 
-## Questions
+### Questions and Comments
 
 **JSON**: Javascript Object Notation
 
 + When a file has the extension *.json, what assumptions are safe to make? 
   + UTF-8 encoded
-  + Are "stacks" of JSON in line with RFC, ECMA?
+  + Are text "stacks" of JSON in line with RFC, ECMA?
+    + common on log files
 
-+ Main disadvantage of not using Pandas?
-  + Pandas is optimized?
-  + RAM constraints?
++ Disadvantage of not using Pandas?
+  + Pandas is better computationally optimized?
+
++ Advantage of not using Pandas?
+  + Scalability, Avoid RAM constraints?
 
