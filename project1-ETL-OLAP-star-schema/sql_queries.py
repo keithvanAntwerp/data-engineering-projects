@@ -9,11 +9,11 @@
 
 songplay_table_create = ("""CREATE TABLE songplays (
 songplay_id serial primary key,
-start_time varchar(100),
-user_id varchar(100),
+start_time bigint REFERENCES time (start_time),
+user_id varchar(100) REFERENCES users (user_id),
 level varchar(100),
-song_id varchar(100),
-artist_id varchar(100),
+song_id varchar(100) REFERENCES songs (song_id),
+artist_id varchar(100) REFERENCES artists (artist_id),
 session_id varchar(100),
 location varchar(100),
 user_agent varchar(500)
@@ -37,7 +37,7 @@ duration real
 """)
 
 artist_table_create = ("""CREATE TABLE artists (
-artist_id varchar(100),
+artist_id varchar(100) primary key,
 name varchar(100),
 location varchar(100),
 latitude real,
@@ -69,15 +69,16 @@ user_table_in1 = (
 """
 INSERT INTO users (user_id, first_name, last_name, gender, level)
 VALUES (%s, %s, %s, %s, %s)
-ON CONFLICT (user_id) DO NOTHING;
+ON CONFLICT (user_id) DO UPDATE SET level = excluded.level;
 """)
 
 song_table_in1 = ("""INSERT INTO songs (song_id, title, artist_id, year,
     duration) VALUES (%s, %s, %s, %s, %s)
     ON CONFLICT (song_id) DO NOTHING;""")
 
-artist_table_in1 = ("INSERT INTO artists (artist_id, name, location, \
-    latitude, longitude) VALUES (%s, %s, %s, %s, %s);")
+artist_table_in1 = ("""INSERT INTO artists (artist_id, name, location, \
+    latitude, longitude) VALUES (%s, %s, %s, %s, %s)
+    ON CONFLICT (artist_id) DO NOTHING;""")
 
 time_table_in1 = (
 """
@@ -105,7 +106,7 @@ AND (abs(songs.duration - %s) < 5);
 
 # QUERY LISTS
 
-create_table_queries = [songplay_table_create, user_table_create,
-                        song_table_create, artist_table_create, time_table_create]
+create_table_queries = [user_table_create,
+                        song_table_create, artist_table_create, time_table_create, songplay_table_create]
 #drop_table_queries = [songplay_table_drop, user_table_drop,
 #                     song_table_drop, artist_table_drop, time_table_drop]
