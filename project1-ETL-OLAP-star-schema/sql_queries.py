@@ -10,10 +10,10 @@
 songplay_table_create = ("""CREATE TABLE songplays (
 songplay_id serial primary key,
 start_time bigint REFERENCES time (start_time),
-user_id varchar(100) REFERENCES users (user_id),
-level varchar(100),
 song_id varchar(100) REFERENCES songs (song_id),
 artist_id varchar(100) REFERENCES artists (artist_id),
+user_id varchar(100) REFERENCES users (user_id),
+level varchar(100),
 session_id varchar(100),
 location varchar(100),
 user_agent varchar(500)
@@ -62,7 +62,7 @@ weekday integer
 # data is protected from a SQL injection attack?
 
 songplay_table_in1 = ("""INSERT INTO songplays (start_time,
-    user_id, level, song_id, artist_id, session_id, location, user_agent)
+    song_id, artist_id, user_id, level, session_id, location, user_agent)
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s);""")
 
 user_table_in1 = (

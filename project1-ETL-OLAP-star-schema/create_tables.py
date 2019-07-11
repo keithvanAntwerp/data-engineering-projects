@@ -11,7 +11,7 @@ def create_database():
     # connect to default database hosted locally
     try:
         conn = psycopg2.connect(
-        "host=127.0.0.1 dbname=studentdb user=student password = student")
+        "host=127.0.0.1 dbname=studentdb user=keithvanantwerp password = student")
     except psycopg2.Error as e:
         print(("ERROR: Could not connect to a default "
                "Postgres through psycopg2.connect()!"))
