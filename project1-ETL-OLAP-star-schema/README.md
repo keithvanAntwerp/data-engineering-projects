@@ -16,7 +16,7 @@ This is essentially a mini data mart that stitches rich artist and song data fro
 [The Million Song Data Set](http://millionsongdataset.com/) to
 simulated application event logs.
 
-## Example
+## Example 
 ```
 >>> python create_tables.py
 create_tables.py:33: UserWarning: About to attempt to drop to reset database sparkifydb
