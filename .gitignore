@@ -1,1 +1,8 @@
-project1-ETL-OLAP-star-schema/_pycache_
+**/.ipynb_checkpoints
+**/.vscode
+**/_pycache_
+.DS_Store
+
+
+
+
